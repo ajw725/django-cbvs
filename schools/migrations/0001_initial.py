@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
                 ('age', models.PositiveIntegerField()),
-                ('school', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='basic_app.school')),
+                ('school', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='schools.school')),
             ],
             options={
                 'abstract': False,

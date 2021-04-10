@@ -1,0 +1,15 @@
+{% extends 'schools/school_base.html' %}
+
+{% block content %}
+
+<h1>Caution: Destructive Action!</h1>
+
+<h2>Are you sure you want to delete school {{ school.name }}?</h2>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Delete</button>
+  <a href="{% url 'schools:detail' pk=school.pk %}">Cancel</a>
+</form>
+
+{% endblock %}

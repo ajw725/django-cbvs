@@ -1,4 +1,4 @@
-{% extends "basic_app/school_base.html" %}
+{% extends "schools/school_base.html" %}
 
 {% block content %}
 <div class="jumbotron">
@@ -14,5 +14,14 @@
       <li>{{student.name}} ({{student.age}})</li>
     {% endfor %}
   </ul>
+
+  <div class="container">
+    <p>
+      <a href="{% url 'schools:edit' pk=school.pk %}">Edit School</a>
+    </p>
+    <p>
+      <a href="{% url 'schools:delete' pk=school.pk %}">Delete School</a>
+    </p>
+  </div>
 </div>
 {% endblock %}
