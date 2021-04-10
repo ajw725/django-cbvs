@@ -1,0 +1,11 @@
+{% extends "basic_app/school_base.html" %}
+
+{% block content %}
+<h1>This is a list of all schools in the world.</h1>
+
+<ol>
+  {% for school in schools %}
+    <li><a href="{{school.id}}">{{ school.name }}</a></li>
+  {% endfor %}
+</ol>
+{% endblock %}
